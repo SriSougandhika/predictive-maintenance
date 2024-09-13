@@ -5,6 +5,7 @@ This project focuses on developing a "Predictive Maintenance Machine Learning AP
 
 The system is designed to assist industries in proactive maintenance by identifying potential breakdowns before they occur, reducing downtime and maintenance costs. The API is accessible via a simple web interface that enables users to upload data, receive predictions, and make informed decisions about machine maintenance.
 
+**Dataset used:** https://www.kaggle.com/datasets/abdelazizsami/predictive-maintenance-dataset
 
 ### FILES USED IN THE PROJECT:
 Following is the information of the files involved in this project:
