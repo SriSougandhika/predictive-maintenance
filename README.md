@@ -48,6 +48,9 @@ Following is the information of the files involved in this project:
 6. We have provided 2 sample CSVs (sample1.csv, sample2.csv) each one for a failure and not-failure case.
 7. After uploading click the predict button to get results.
 
+**NOTE:** If you are trying to run this on github pages, make sure you download the api.py file and other needed files from this folder, and run the api.py on localhost to fetch the data. Otherwise, it pops up that an error has occured.
+
+Find the sample output images in this folder itself, labeled something like 'output-XXXX.png'.
 
 ### COPYRIGHTS:
 This project is done by myself and is not copied from any sources. It may have similarities with others' codes as the concepts are highly established, but I assure that my intention is not to plagiarise anyone's work. I present this project for knowledge enhancement and improvement in the field of machine learning.
