@@ -1,0 +1,2 @@
+UID,Product ID,Type,Air temperature [K],Process temperature [K],Rotational speed [rpm],Torque [Nm],Tool wear [min],Machine failure,TWF,HDF,PWF,OSF,RNF
+1,M14860,M,298.1,308.6,1551,42.8,0,0,0,0,0,0,0

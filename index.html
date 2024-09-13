@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictive Maintenance API</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Predict Machine Failures</h1>
+        <form id="upload-form" enctype="multipart/form-data">
+            <label for="file-input">Upload CSV File:</label>
+            <input type="file" id="file-input" name="file" accept=".csv" required>
+            <button type="submit" id="submit-btn">Predict</button>
+        </form>
+        <div id="response">
+            <!-- Prediction results will appear here -->
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('upload-form');
+        const responseDiv = document.getElementById('response');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+            const requestOptions = {
+                method: 'POST',
+                body: formData
+            };
+
+            fetch('http://127.0.0.1:5000/predict', requestOptions)
+                .then(response => response.json())
+                .then(data => {
+                    // Display the predictions in the response div
+                    let result = '<h3>Predictions</h3>';
+                    for (const [model, prediction] of Object.entries(data)) {
+                        result += `<p><strong>${model}</strong>: ${prediction.join(', ')}</p>`;
+                    }
+                    responseDiv.innerHTML = result;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    responseDiv.innerHTML = '<p>There was an error processing your request. Please try again.</p>';
+                });
+        });
+    </script>
+</body>
+</html>
